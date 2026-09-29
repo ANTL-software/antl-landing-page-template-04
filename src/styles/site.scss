@@ -26,7 +26,7 @@ a { color: inherit; text-decoration: none; }
 .section h2 { font-size: clamp(3.1rem, 5.8vw, 6rem); }
 .collection { overflow: hidden; }
 .collection__intro { display: grid; grid-template-columns: .75fr 1.1fr .7fr; gap: 2rem; align-items: end; max-width: 92rem; margin: 0 auto clamp(3.5rem, 7vw, 7rem); }
-.collection__intro h2 { max-width: 10ch; justify-self: center; }
+.collection__intro h2 { max-width: 10ch; justify-self: center; text-align: center; }
 .collection__intro > p:last-child { max-width: 25rem; margin: 0; color: #65675f; line-height: 1.7; }
 .vehicle-grid { display: grid; grid-template-columns: 1.25fr .85fr 1.05fr; gap: clamp(1rem, 3vw, 3.5rem); max-width: 92rem; margin: auto; align-items: start; }
 .vehicle-card { display: block; background: #f4f3ee; transition: transform .25s ease; }
@@ -77,7 +77,7 @@ a { color: inherit; text-decoration: none; }
 
 .contact { text-align: center; background: #b1d139; }
 .contact .eyebrow { color: #28301c; }
-.contact h2 { max-width: 11ch; margin: 1rem auto 1.75rem; font-size: clamp(3.5rem, 7vw, 7rem); line-height: .94; }
+.contact h2 { max-width: 14ch; margin: 1rem auto 1.75rem; font-size: clamp(3.5rem, 7vw, 7rem); line-height: .94; text-align: center; }
 .contact > p:not(.eyebrow) { max-width: 35rem; margin: 0 auto 2rem; line-height: 1.65; }
 .contact .link-button { background: #1e251c; color: #f4f3ee; }
 .contact small { display: block; margin-top: 1.5rem; color: #3f492d; }
@@ -94,6 +94,7 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5r
   .hero__bottom { align-items: start; flex-direction: column; gap: 1.5rem; }
   .collection__intro, .gallery, .story, .section-heading, .approach ol { grid-template-columns: 1fr; }
   .collection__intro { gap: 1.25rem; margin-bottom: 3rem; }
+  .collection__intro h2 { margin-inline: auto; }
   .vehicle-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .vehicle-card--2, .vehicle-card--3 { margin-top: 0; }
   .vehicle-card__image, .vehicle-card--1 .vehicle-card__image, .vehicle-card--2 .vehicle-card__image, .vehicle-card--3 .vehicle-card__image { aspect-ratio: 1.15; }
