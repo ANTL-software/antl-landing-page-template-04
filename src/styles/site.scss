@@ -17,7 +17,8 @@ a { color: inherit; text-decoration: none; }
 .hero__veil { background: linear-gradient(90deg, rgba(8, 11, 8, .88), rgba(8, 11, 8, .48) 46%, rgba(8, 11, 8, .08)); }
 .hero__content { position: relative; z-index: 1; display: flex; min-height: 100%; padding: clamp(2rem, 6vw, 6rem); flex-direction: column; justify-content: space-between; }
 .eyebrow { margin: 0; color: #aeca41; font: 500 .68rem/1.3 "DM Mono", monospace; letter-spacing: .1em; text-transform: uppercase; }
-.hero h1, h2 { margin: 0; white-space: pre-line; font: 500 clamp(3.5rem, 8.5vw, 8.8rem)/.84 "Playfair Display", serif; letter-spacing: -.07em; }
+.hero h1, h2 { margin: 0; white-space: pre-line; font: 500 clamp(3.5rem, 8.5vw, 8.8rem)/.91 "Playfair Display", serif; letter-spacing: -.055em; text-wrap: balance; }
+.hero h1 { line-height: .87; letter-spacing: -.065em; }
 .hero__bottom { display: flex; max-width: 43rem; align-items: end; gap: 3rem; }
 .hero__bottom p { max-width: 22rem; margin: 0; color: #dedfd9; line-height: 1.6; }
 
@@ -25,6 +26,7 @@ a { color: inherit; text-decoration: none; }
 .section h2 { font-size: clamp(3.1rem, 5.8vw, 6rem); }
 .collection { overflow: hidden; }
 .collection__intro { display: grid; grid-template-columns: .75fr 1.1fr .7fr; gap: 2rem; align-items: end; max-width: 92rem; margin: 0 auto clamp(3.5rem, 7vw, 7rem); }
+.collection__intro h2 { max-width: 10ch; justify-self: center; }
 .collection__intro > p:last-child { max-width: 25rem; margin: 0; color: #65675f; line-height: 1.7; }
 .vehicle-grid { display: grid; grid-template-columns: 1.25fr .85fr 1.05fr; gap: clamp(1rem, 3vw, 3.5rem); max-width: 92rem; margin: auto; align-items: start; }
 .vehicle-card { display: block; background: #f4f3ee; transition: transform .25s ease; }
@@ -39,7 +41,7 @@ a { color: inherit; text-decoration: none; }
 .vehicle-card__meta { display: flex; justify-content: space-between; gap: 1rem; padding: 1.1rem 0; }
 .vehicle-card__meta svg { flex: none; margin-top: .25rem; }
 .vehicle-card__meta p { margin: 0; color: #7c7d75; font: 500 .68rem "DM Mono", monospace; }
-.vehicle-card h3 { margin: .45rem 0; font: 500 clamp(1.45rem, 2vw, 2rem) "Playfair Display", serif; }
+.vehicle-card h3 { margin: .55rem 0; font: 500 clamp(1.45rem, 2vw, 2rem)/1.05 "Playfair Display", serif; letter-spacing: -.025em; }
 .vehicle-card span { color: #65675f; font-size: .82rem; }
 
 .gallery { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: clamp(2rem, 9vw, 11rem); padding-top: clamp(6rem, 13vw, 13rem); }
@@ -48,7 +50,7 @@ a { color: inherit; text-decoration: none; }
 .gallery__label { position: absolute; top: 10%; right: -14%; display: grid; gap: 2.5rem; width: min(15rem, 42%); padding: 1.25rem; background: #283025; color: #f4f3ee; }
 .gallery__label .eyebrow { color: #c5da6b; }
 .gallery__label span { font: .65rem "DM Mono", monospace; }
-.gallery__copy { max-width: 33rem; }
+.gallery__copy { max-width: 33rem; justify-self: start; padding-block: 2rem; }
 .gallery__copy h2 { margin: 0; }
 .gallery__copy p { max-width: 26rem; margin: 1.5rem 0 2rem; color: #65675f; line-height: 1.7; }
 .gallery__copy .link-button { background: #283025; color: #f4f3ee; }
@@ -57,25 +59,25 @@ a { color: inherit; text-decoration: none; }
 .story__visual { position: relative; }
 .story__visual > img { display: block; width: 100%; min-height: 42rem; object-fit: cover; }
 .story__caption { display: flex; justify-content: space-between; gap: 1rem; padding: .9rem 1rem; background: #f4f3ee; color: #171914; font: .65rem "DM Mono", monospace; }
-.story__copy { padding: clamp(1rem, 4vw, 4rem) 0; }
+.story__copy { align-self: center; padding: clamp(1rem, 4vw, 4rem) 0; }
 .story h2 { color: #f4f3ee; font-size: clamp(3rem, 5.8vw, 6rem); }
 .story__copy > p:not(.eyebrow) { max-width: 30rem; margin: 2rem 0; color: #d3d5ce; line-height: 1.7; }
 .story strong { color: #c5da6b; font: 500 .78rem "DM Mono", monospace; }
 
 .approach { padding-top: clamp(6rem, 13vw, 13rem); }
-.section-heading { display: grid; grid-template-columns: .75fr 1.25fr; gap: 2rem; margin-bottom: 4rem; }
+.section-heading { display: grid; grid-template-columns: .75fr 1.25fr; gap: 2rem; align-items: end; margin-bottom: 4rem; }
 .approach .section-heading h2 { max-width: 13ch; }
 .approach ol { display: grid; grid-template-columns: repeat(3, 1fr); padding: 0; border-top: 1px solid #bcbeb4; list-style: none; }
 .approach li { padding: 2rem 2rem 0 0; border-right: 1px solid #bcbeb4; }
 .approach li + li { padding-left: 2rem; }
 .approach li:last-child { border: 0; }
 .approach li span { color: #7c7d75; font: .7rem "DM Mono", monospace; }
-.approach h3 { margin: 4.5rem 0 1rem; font: 500 2rem "Playfair Display", serif; }
+.approach h3 { margin: 4.5rem 0 1rem; font: 500 2rem/1.08 "Playfair Display", serif; letter-spacing: -.025em; }
 .approach li p { max-width: 21rem; color: #65675f; line-height: 1.65; }
 
 .contact { text-align: center; background: #b1d139; }
 .contact .eyebrow { color: #28301c; }
-.contact h2 { max-width: 11ch; margin: 1rem auto 1.5rem; font-size: clamp(3.5rem, 7vw, 7rem); }
+.contact h2 { max-width: 11ch; margin: 1rem auto 1.75rem; font-size: clamp(3.5rem, 7vw, 7rem); line-height: .94; }
 .contact > p:not(.eyebrow) { max-width: 35rem; margin: 0 auto 2rem; line-height: 1.65; }
 .contact .link-button { background: #1e251c; color: #f4f3ee; }
 .contact small { display: block; margin-top: 1.5rem; color: #3f492d; }
@@ -87,6 +89,8 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5r
   .hero { min-height: 42rem; }
   .hero__content { padding: 1.25rem; }
   .hero h1 { font-size: clamp(3.8rem, 17vw, 5.6rem); }
+  .hero h1, h2 { letter-spacing: -.045em; }
+  h2 { line-height: .94; }
   .hero__bottom { align-items: start; flex-direction: column; gap: 1.5rem; }
   .collection__intro, .gallery, .story, .section-heading, .approach ol { grid-template-columns: 1fr; }
   .collection__intro { gap: 1.25rem; margin-bottom: 3rem; }
