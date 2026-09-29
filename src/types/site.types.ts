@@ -10,7 +10,15 @@ export type Vehicle = {
   href: string;
 };
 
-export type SiteSectionId = "collection" | "story" | "approach" | "contact";
+export type EditorialFeature = {
+  eyebrow: string;
+  title: string;
+  text: string;
+  image: ImageAsset;
+  cta: Link;
+};
+
+export type SiteSectionId = "collection" | "gallery" | "story" | "approach" | "contact";
 
 export type VehicleSite = {
   brand: string;
@@ -18,6 +26,7 @@ export type VehicleSite = {
   headerCta: Link;
   hero: { eyebrow: string; title: string; text: string; cta: Link; image: ImageAsset };
   collection: { eyebrow: string; title: string; text: string; items: readonly Vehicle[] };
+  gallery: EditorialFeature;
   story: { eyebrow: string; title: string; text: string; image: ImageAsset; fact: string };
   approach: { eyebrow: string; title: string; steps: readonly { number: string; title: string; text: string }[] };
   contact: { eyebrow: string; title: string; text: string; cta: Link; note: string };
