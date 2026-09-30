@@ -1,5 +1,14 @@
 export type Link = { label: string; href: string };
 
+export type VehicleTheme = {
+  canvas: string;
+  ink: string;
+  dark: string;
+  accent: string;
+  muted: string;
+  lightInk: string;
+};
+
 export type ImageAsset = { src: string; alt: string; position?: string };
 
 export type Vehicle = {
@@ -21,6 +30,7 @@ export type EditorialFeature = {
 export type SiteSectionId = "collection" | "gallery" | "story" | "approach" | "contact";
 
 export type VehicleSite = {
+  theme: VehicleTheme;
   brand: string;
   navigation: readonly Link[];
   headerCta: Link;

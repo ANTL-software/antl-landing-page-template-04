@@ -7,6 +7,7 @@ import garageExterior from "../assets/garage-exterior.png";
 import type { VehicleSite } from "../types";
 
 export const site: VehicleSite = {
+  theme: { canvas: "#f4f3ee", ink: "#171914", dark: "#283025", accent: "#b1d139", muted: "#65675f", lightInk: "#f4f3ee" },
   brand: "Garage Élan",
   navigation: [{ label: "Nos véhicules", href: "#collection" }, { label: "L’atelier", href: "#atelier" }, { label: "Services", href: "#methode" }],
   headerCta: { label: "Nous contacter", href: "#contact" },
