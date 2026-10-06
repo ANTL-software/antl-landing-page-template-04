@@ -85,14 +85,33 @@ a { color: inherit; text-decoration: none; }
 .contact small { display: block; margin-top: 1.5rem; color: #3f492d; }
 footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5rem clamp(1rem, 4vw, 4.5rem); background: #171a16; color: #b6b8af; font-size: .72rem; }
 
+a { touch-action: manipulation; }
+.link-button,.site-header a,footer a { min-height: 44px; }
+.site-header a,footer a { display: inline-flex; align-items: center; }
+.link-button { max-width: 100%; }
+.link-button svg { flex-shrink: 0; }
+.hero h1 { line-height: 1.04; }
+.section h2,.story h2 { line-height: 1.1; }
+.section>*,.vehicle-grid>*,.story>* { min-width: 0; }
+@media (max-width: 1050px) and (min-width: 761px) {
+  .site-header nav { gap: 1rem; }
+  .collection__intro { grid-template-columns: minmax(0,1fr); text-align: center; }
+  .collection__intro>p:last-child { margin: auto; }
+  .gallery,.story { gap: 2.5rem; }
+  .approach h3 { font-size: 1.6rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }.vehicle-card,.vehicle-card img { transition: none; } }
+
 @media (max-width: 760px) {
   .site-header { grid-template-columns: 1fr auto; }
-  .site-header nav { display: none; }
+  .site-header { height: auto; min-height: 5rem; padding-block: .6rem; gap: .25rem .75rem; }
+  .site-header nav { display: flex; grid-column: 1 / -1; grid-row: 2; justify-content: space-between; gap: .75rem; }
   .hero { min-height: 42rem; }
   .hero__content { padding: 1.25rem; }
   .hero h1 { font-size: clamp(3.8rem, 17vw, 5.6rem); }
   .hero h1, h2 { letter-spacing: -.045em; }
   h2 { line-height: .94; }
+  .section h2,.story h2 { line-height: 1.1; }
   .hero__bottom { align-items: start; flex-direction: column; gap: 1.5rem; }
   .collection__intro, .gallery, .story, .section-heading, .approach ol { grid-template-columns: 1fr; }
   .approach .section-heading { min-height: auto; }
@@ -111,4 +130,6 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5r
   .approach h3 { margin: 1.5rem 0 .6rem; }
   footer { flex-direction: column; }
   .site-header .link-button { padding: .6rem .7rem; font-size: .68rem; }
+  .hero { min-height: max(38rem,calc(100svh - 8rem)); }
+  .hero h1 { font-size: clamp(3.35rem,15vw,5.6rem); }
 }
